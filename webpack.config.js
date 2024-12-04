@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-
+const ESLintPlugin = require("eslint-webpack-plugin");
 module.exports = {
   entry: path.join(__dirname, "", "index.js"),
   output: {
@@ -13,6 +13,7 @@ module.exports = {
       template: path.join(__dirname, "public", "index.html"),
     }),
     new BundleAnalyzerPlugin(),
+    new ESLintPlugin(),
   ],
   module: {
     rules: [
