@@ -4,7 +4,7 @@ const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const ESLintPlugin = require("eslint-webpack-plugin");
 module.exports = {
-  entry: path.join(__dirname, "", "index.js"),
+  entry: path.join(__dirname, "index.tsx"),
   output: {
     path: path.resolve(__dirname, "dist"),
   },
@@ -18,20 +18,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
-          },
-        },
+        use: ["babel-loader", "ts-loader"],
       },
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
     ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
   },
   devServer: {
     port: 3000,

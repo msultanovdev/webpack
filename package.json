@@ -5,14 +5,17 @@
   "scripts": {
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "npx eslint ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "i": "^0.3.7",
     "install-peerdeps": "^3.0.3",
+    "npm": "^10.9.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "touch": "^3.1.1",
@@ -25,6 +28,8 @@
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.9",
     "@eslint/js": "^9.16.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
     "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
     "eslint": "^8.0.0",
@@ -36,6 +41,8 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
     "webpack": "^5.97.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"
