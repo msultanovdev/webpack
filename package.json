@@ -48,6 +48,7 @@
   "lint-staged": {
     "*.{js,json,css,md,html}": [
       "prettier --single-quote --write",
+      "npx eslint .",
       "git add"
     ]
   }
